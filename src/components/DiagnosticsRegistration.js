@@ -3,7 +3,7 @@ import Web3 from "web3";
 import DiagnosticRegistration from "../build/contracts/DiagnosticRegistration.json";
 import { useNavigate } from "react-router-dom";
 import "../CSS/DoctorRegistration.css";
-import NavBar from "./NavBar";
+import NavBar2 from "./NavBar2";
 
 const DiagnosticRegistry = () => {
   const [web3, setWeb3] = useState(null);
@@ -169,7 +169,7 @@ const DiagnosticRegistry = () => {
 
   return (
     <div>
-    <NavBar></NavBar>
+    <NavBar2></NavBar2>
     <div className="createehr min-h-screen flex items-center justify-center p-4 bg-gradient-to-b from-black to-gray-800 font-mono">
       <div className="w-full max-w-2xl">
         <h2 className="text-3xl text-white mb-6 font-bold text-center">
@@ -266,7 +266,7 @@ const DiagnosticRegistry = () => {
             
           <div className="mb-4">
             <label className="block font-bold text-white" htmlFor="hhNumber">
-              HH Number
+            ABHA Number
             </label>
             <input
               id="hhNumber"

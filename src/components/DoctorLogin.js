@@ -3,7 +3,7 @@ import Web3 from "web3";
 import DoctorRegistration from "../build/contracts/DoctorRegistration.json";
 import { useNavigate } from "react-router-dom";
 import "../CSS/DoctorLoginPage.css";
-import NavBar from "./NavBar";
+import NavBar2 from "./NavBar2";
 
 const DoctorLogin = () => {
   const navigate = useNavigate();
@@ -21,7 +21,7 @@ const DoctorLogin = () => {
       sethhNumberError("");
     } else {
       sethhNumber(inputhhNumber);
-      sethhNumberError("Please enter a 6-digit HH Number.");
+      sethhNumberError("Please enter a 14-digit ABHA Number.");
     }
   };
 
@@ -69,13 +69,13 @@ const DoctorLogin = () => {
 
   return (
     <div>
-      <NavBar />
+      <NavBar2 />
       <div className="bg-gradient-to-b from-black to-gray-800 min-h-screen flex flex-col justify-center items-center p-4 font-mono text-white">
         <div className="w-full max-w-4xl bg-gray-900 p-20 rounded-lg shadow-lg">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">Doctor Login</h2>
           <div className="mb-4">
             <label className="block font-bold text-white" htmlFor="hhNumber">
-              HH Number
+              ABHA Number
             </label>
             <input
               id="hhNumber"

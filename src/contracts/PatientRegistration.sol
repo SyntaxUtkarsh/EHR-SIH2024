@@ -12,7 +12,6 @@ contract PatientRegistration {
         string email;
         string hhNumber;
         string password;
-        string[] medicalRecords;
     }
 
     struct PatientList{
@@ -114,16 +113,5 @@ contract PatientRegistration {
 
     function getPatientList(string memory _doctorNumber) public view returns (PatientList[] memory) {
         return Dpermission[_doctorNumber];
-    }
-      // Function to add a medical record
-    function addMedicalRecord(string memory _hhNumber, string memory _ipfsHash) external {
-        require(isPatientRegistered[_hhNumber], "Patient not registered");
-        patients[_hhNumber].medicalRecords.push(_ipfsHash);
-    }
-
-    // Function to retrieve medical records
-    function getMedicalRecords(string memory _hhNumber) external view returns (string[] memory) {
-        require(isPatientRegistered[_hhNumber], "Patient not registered");
-        return patients[_hhNumber].medicalRecords;
     }
 }

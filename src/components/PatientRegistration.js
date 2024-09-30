@@ -3,7 +3,7 @@ import Web3 from "web3";
 import PatientRegistration from "../build/contracts/PatientRegistration.json";
 import { useNavigate } from "react-router-dom";
 import "../CSS/PatientRegistration.css";
-import NavBar from "./NavBar";
+import NavBar2 from "./NavBar2";
 
 const PatientRegistry = () => {
   const [web3, setWeb3] = useState(null);
@@ -184,7 +184,7 @@ const PatientRegistry = () => {
       sethhNumberError("");
     } else {
       sethhNumber(inputhhNumber);
-      sethhNumberError("Please enter a 6-digit HH Number.");
+      sethhNumberError("Please enter a 14-digit ABHA Number.");
     }
   };
 
@@ -194,7 +194,7 @@ const PatientRegistry = () => {
 
   return (
     <div>
-    <NavBar></NavBar>
+    <NavBar2></NavBar2>
     <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-b from-black to-gray-800 font-mono">
       <div className="w-full max-w-4xl">
         <h2 className="text-3xl text-white mb-6 font-bold text-center">
@@ -308,7 +308,7 @@ const PatientRegistry = () => {
 
           <div className="mb-4">
             <label className="block font-bold text-white" htmlFor="hhNumber">
-              HH Number
+              ABHA Number
             </label>
             <input
               id="hhNumber"
@@ -316,7 +316,7 @@ const PatientRegistry = () => {
               type="text"
               required
               className={`mt-2 p-2 w-full text-white bg-gray-700 border border-gray-600 rounded-md hover-bg-gray-800 transition duration-200 ${hhNumberError && "border-red-500"}`}
-              placeholder="Enter your HH Number"
+              placeholder="Enter your ABHA Number"
               value={hhNumber}
               onChange={handlehhNumberChange}
             />

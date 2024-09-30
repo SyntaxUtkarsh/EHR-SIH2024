@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import NavBar from "./NavBar";
+import NavBar2 from "./NavBar2";
 
 const LoginPage = () => {
   const navigate = useNavigate();
   return (
     <div>
-    <NavBar></NavBar>
+    <NavBar2></NavBar2>
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black to-gray-800 font-mono">
       <div className="space-y-6 mt-[-50px] w-full max-w-xs mx-auto">
         <button
