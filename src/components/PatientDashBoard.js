@@ -6,7 +6,7 @@ import NavBar_Logout from "./NavBar_Logout";
 import PatientRegistration from "../build/contracts/PatientRegistration.json";
 
 const PatientDashBoard = () => {
-  const { hhNumber } = useParams(); // Retrieve the hhNumber from the URL parameter
+  const { hhNumber } = useParams(); 
 
   const navigate = useNavigate();
   
